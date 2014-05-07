@@ -1,5 +1,6 @@
 require 'destruction/version'
+require 'destruction/context'
 
-module Monady
+module Destruction
 
 end
