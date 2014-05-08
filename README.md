@@ -2,9 +2,10 @@ Destruction
 
 =============
 
-Monady allows you to write in monadic way in Ruby.
+Destruction is inpired by values destruction in Clojure and pattern matching in Haskell.
 
 Usage
 _____
 
-___________
+Coming soon
+__________
