@@ -13,7 +13,7 @@ describe Destruction::Hash do
     expect(a).to respond_to(:match)
   end
   
-  it "destructures equal length hash" do
+  it "destructures equally long hash" do
     r = {a: 1, b: 2, c: 3}
     v = r.match do
       _(:a, :b, :c) { b + c + a }
@@ -21,7 +21,7 @@ describe Destruction::Hash do
     expect(v).to be_eql(6)
   end
   
-  it "destructures greater length hash" do
+  it "destructures longer hash" do
     r = {a: 1, b: 2, c: 3, d: 4}
     v = r.match do
       _(:b, :c, :d) { b + c + d }
@@ -29,7 +29,7 @@ describe Destruction::Hash do
     expect(v).to be_eql(9)
   end
   
-  it "destructures less length hash" do
+  it "destructures shorter hash" do
     r = {a: 1, b: 2}
     v = r.match do
       _(:b, :c, :d) { d }

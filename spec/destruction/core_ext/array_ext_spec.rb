@@ -13,7 +13,7 @@ describe Destruction::Array do
     expect(a).to respond_to(:match)
   end
   
-  it "destructures equal length array" do
+  it "destructures equally long array" do
     a = [4, 5, 6]
     v = a.match do
       _(:b, :c, :d) { b + c + d }
@@ -21,7 +21,7 @@ describe Destruction::Array do
     expect(v).to be_eql(15)
   end
   
-  it "destructures greater length array" do
+  it "destructures longer array" do
     a = [4, 5, 6, 7, 8]
     v = a.match do
       _(:b, :c, :d) { b + c + d }
@@ -29,7 +29,7 @@ describe Destruction::Array do
     expect(v).to be_eql(15)
   end
   
-  it "destructures less length array" do
+  it "destructures shorter array" do
     a = [4, 5]
     v = a.match do
       _(:b, :c, :d) { d }
